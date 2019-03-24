@@ -12,9 +12,6 @@
     <properties>
         <!--统一源代码的编码方式-->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <!--统一源代码与编译输出的JDK版本-->
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
 
     <dependencies>
@@ -43,6 +40,16 @@
 
     <build>
         <plugins>
+        	<plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.5.1</version>
+                <configuration>
+                    <!--统一源代码与编译输出的JDK版本-->
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
             <!--tomcat的maven插件：以插件的方式启动tomcat-->
             <plugin>
                 <groupId>org.apache.tomcat.maven</groupId>
